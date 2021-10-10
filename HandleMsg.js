@@ -1178,6 +1178,9 @@ module.exports = HandleMsg = async (aruga, message) => {
                     aruga.reply(from, err, id)
                 }
             break
+	case 'absen':
+            if (args.length == 0) return aruga.reply(from, `Silahkan untuk mengisi daftar hadir online melalui link berikut:\n\nKelas X:\nhttps://s.id/DH_KLSX\n\n\nRekap daftar hadir dapat dilihat melalui link:\nhttps://s.id/REKAP_HADIR`)
+            break
         case 'translate':
             if (args.length != 1) return aruga.reply(from, `Maaf, format pesan salah.\nSilahkan reply sebuah pesan dengan caption ${prefix}translate <kode_bahasa>\ncontoh ${prefix}translate id`, id)
             if (!quotedMsg) return aruga.reply(from, `Maaf, format pesan salah.\nSilahkan reply sebuah pesan dengan caption ${prefix}translate <kode_bahasa>\ncontoh ${prefix}translate id`, id)
